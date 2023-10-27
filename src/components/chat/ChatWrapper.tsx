@@ -24,7 +24,7 @@ const ChatWrapper = ({
         fileId,
       },
       {
-        refetchInterval: (data) =>
+        refetchInterval: (data: { status: string }) =>
           data?.status === 'SUCCESS' ||
           data?.status === 'FAILED'
             ? false

@@ -17,7 +17,7 @@ const Page = () => {
         router.push(origin ? `/${origin}` : '/dashboard')
       }
     },
-    onError: (err) => {
+    onError: (err: { data: { code: string } }) => {
       if (err.data?.code === 'UNAUTHORIZED') {
         router.push('/sign-in')
       }
